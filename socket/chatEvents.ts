@@ -44,7 +44,7 @@ export function registerChatEvents(io: SocketIOServer, socket : Socket){
 
 
 
-    socket.on("newConversations", async(data) => {
+    socket.on("newConversations", async(data : any) => {
         console.log("newConversations event: ", data);
 
         try {
@@ -101,7 +101,7 @@ export function registerChatEvents(io: SocketIOServer, socket : Socket){
         }
     })
 
-    socket.on("newMessage", async(data) => {
+    socket.on("newMessage", async(data : any) => {
         console.log("new message: ", data)
         
         try {
