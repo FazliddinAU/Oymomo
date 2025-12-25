@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import  type {ConversationProps}  from "../types.ts";
+import  type {ConversationProps}  from "../types";
 
 const ConversationSchema = new Schema<ConversationProps>({
     type : {
