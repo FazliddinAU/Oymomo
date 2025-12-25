@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     res.send("Server ishlamoqda...")
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const server = http.createServer(app);
 
 intializedSocket(server);
@@ -27,7 +27,7 @@ connectDB().then(() => {
     console.log("MongoDB ulandi")
     server.listen(PORT, "0.0.0.0", () => {
         console.log("Ish boshlandi", PORT)
-    })
+    });
 }).catch((error) => {
     console.log("Mongoga ulanishda muammo yuz berdi", error)
 })
