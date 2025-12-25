@@ -1,6 +1,6 @@
 import  { Socket, Server as SocketIOServer } from "socket.io";
-import User from "../models/User";
-import { generateToken } from "../utils/token";
+import User from "../models/User.js";
+import { generateToken } from "../utils/token.js";
 
 export function registerUserEvent(io : SocketIOServer, socket : Socket){
     socket.on("testSocket", (data: any) => {
