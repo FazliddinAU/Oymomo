@@ -1,7 +1,7 @@
 import type { Request, Response } from "express"
-import User from "../models/User";
+import User from "../models/User.js";
 import bcrypt from "bcryptjs";
-import { generateToken } from "../utils/token";
+import { generateToken } from "../utils/token.js";
 
 
 export const registerUser = async(req: Request, res: Response) : Promise<void> => {
