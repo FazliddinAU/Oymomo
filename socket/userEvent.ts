@@ -3,7 +3,7 @@ import User from "../models/User";
 import { generateToken } from "../utils/token";
 
 export function registerUserEvent(io : SocketIOServer, socket : Socket){
-    socket.on("testSocket", (data) => {
+    socket.on("testSocket", (data: any) => {
         socket.emit("testSocket", { msg : "its working !!"});
     })
 
