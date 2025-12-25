@@ -1,6 +1,6 @@
 import { Server as SocketIOServer, Socket} from "socket.io";
-import Conversation from "../models/Conversation";
-import Message from "../models/Message";
+import Conversation from "../models/Conversation.js";
+import Message from "../models/Message.js";
 
 
 export function registerChatEvents(io: SocketIOServer, socket : Socket){
